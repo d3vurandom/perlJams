@@ -1,0 +1,13 @@
+Based considerably off the work done by Grant Bond
+This program will scan a given directory for music and extract the ID3 tags into an index.  The index can then be filtered and cleaned up by filtering out specific artists or tracks or even filter by the bitrate.
+
+You can then ether copy or move the files in the index to a new directory that is created based on the ID3 tags accosted with each audio file.  The goal is to create a common structure for your music library. The structure is Artist/Album/1 - Track.Mmp3
+The following packages are needed, all are available on CPAN.
+
+File::Find
+File::Copy
+File::Path qw(make_path)
+Cwd
+Image::ExifTool;
+Lingua::EN::Numbers qw(num2en num2en_ordinal);
+Term::ANSIColor;
